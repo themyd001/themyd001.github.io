@@ -1,0 +1,28 @@
+body, html
+{
+	height: 100%;
+	margin: 0;
+}
+
+.bg
+{
+	height: 100vh;
+	background-image: url('back.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-left: 100px;
+	overflow-y: scroll
+}
+
+.logo
+{
+	font-size: 50px;
+}
+
+@media (max-width:800px){
+	.bg
+	{
+	padding-left: 0px;
+	}
+}

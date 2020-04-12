@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cartel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="font/css/all.css">
+</head>
+<body onload='setAll()'>
+<div class='bg'>
+<div class='w3-col m4 w3-padding w3-margin-top'>
+<div class='w3-fixed w3-col w3-center w3-margin-top w3-dark-grey w3-margin-bottom'><h2><b><i class="fas fa-chart-line logo"></i><br/> COVID-19 ESTIMATOR </b></h2></div>
+<form>
+<table class='w3-col m12 '>
+<col width='75%'/>
+<col width='25%'/>
+<tr>
+<td><input type='text' class='w3-input w3-margin-bottom w3-dark-grey' placeholder='Region Name' readonly value='Region' /></td>
+<td><input type='text' class='w3-input w3-margin-bottom' readonly value='Africa' /></td>
+</tr>
+<tr>
+<td><input type='text' class='w3-input w3-margin-bottom w3-dark-grey' placeholder='Region Average Age' readonly value='Region Avg. Age' /></td>
+<td><input type='text' class='w3-input w3-margin-bottom' readonly value='19.7' /></td>
+</tr>
+<tr>
+<td><input type='text' class='w3-input w3-margin-bottom w3-dark-grey' placeholder='Region Avg. Daily Income' readonly value='Region Avg. Daily Income' /></td>
+<td><input type='text' class='w3-input w3-margin-bottom' readonly value='5' /></td>
+</tr>
+<tr>
+<td><input type='text' class='w3-input w3-margin-bottom w3-dark-grey' placeholder='Average Daily Income Population' readonly value='Average Daily Income Population' /></td>
+<td><input type='text' class='w3-input w3-margin-bottom' readonly value='0.71' /></td>
+</tr>
+</table>
+<input type='number' class='w3-input w3-round w3-margin-bottom w3-col s8 inputs' placeholder='Time to Elapse' data-time-to-elapse/>
+<select class='w3-select w3-round w3-margin-bottom w3-col s3 w3-left w3-right inputs'  data-period-type>
+<option>days</option>
+<option>weeks</option>
+<option>months</option>
+</select>
+<input type='number' class='w3-input w3-round w3-margin-bottom inputs' placeholder='Reported Cases' data-reported-cases/>
+<input type='number' class='w3-input w3-round w3-margin-bottom inputs' placeholder='Population' data-population />
+<input type='text' class='w3-input w3-round w3-margin-bottom inputs' placeholder='Total Hospital Beds' data-total-hospital-beds />
+</table>
+</form>
+<button class='w3-button w3-col m12 w3-white w3-round w3-padding w3-margin-top' data-goestimate>SUBMIT</button>
+</div>
+<div class='w3-col m8 w3-padding w3-margin-top'>
+<table class='w3-table w3-striped w3-col m12 w3-margin-top w3-white' id="listView">
+<col width='33%'/><col width='33%'/><col width='33%'/>
+<tr class='w3-dark-grey'>
+<td><h4 class='w3-center'>Property</h4></td>
+<td><h4 class='w3-center'>Impact</h4></td>
+<td><h4 class='w3-center'>Severe Impact</h4></td>
+</tr>
+<tr>
+<td>Currently Infected</td>
+<td data-currently-infected></td>
+<td data-severe-currently-infected></td>
+</tr>
+<tr>
+<td>Infections by Requested Time</td>
+<td data-impact-infections-by-requested-time></td>
+<td data-severe-impact-infections-by-requested-time></td>
+</tr>
+<tr>
+<td>Severe Cases by Requested Time</td>
+<td data-severe-cases-by-requested-time></td>
+<td data-severe-severe-cases-by-requested-time></td>
+</tr>
+<tr>
+<td>Hospital Beds by Requested Time</td>
+<td data-hospital-beds-by-requested-time></td>
+<td data-severe-hospital-beds-by-requested-time></td>
+</tr>
+<tr>
+<td>Cases for ICU by Requested Time</td>
+<td data-cases-for-icu-by-requested-time></td>
+<td data-severe-cases-for-icu-by-requested-time></td>
+</tr>
+<tr>
+<td>Cases for Ventilators by Requested Time</td>
+<td data-cases-for-ventilators-by-requested-time></td>
+<td data-severe-cases-for-ventilators-by-requested-time></td>
+</tr>
+<tr>
+<td>Dollars in Flight</td>
+<td data-dollars-in-flight></td>
+<td data-severe-dollars-in-flight></td>
+</tr>
+
+
+</table>
+</div>
+</div>
+
+ 
+<script src='jquery.js'></script>
+<script src='index.js'></script>
+
+</body>
+</html>
